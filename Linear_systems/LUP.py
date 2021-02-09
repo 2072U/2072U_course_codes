@@ -59,8 +59,8 @@ def ForwardSub(L,P,y):
 
 def BackwardSub(U,z):
     # Solve the triangular system U x = z, where U is upper triangular.
-    n = scipy.shape(U)[0]
-    x = scipy.zeros((n,1))
+    n = np.shape(U)[0]
+    x = np.zeros((n,1))
     for i in range(n,0,-1):
         x[i-1] = z[i-1]
         for j in range(i+1,n+1):
